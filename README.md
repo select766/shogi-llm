@@ -55,3 +55,11 @@ yamlで設定ファイルを記述する
 ```
 PYTHONUNBUFFERED=1 uv run python -m shogi_llm.train_v1 config/qwen3-0.6b-t64-winner.yaml | tee qwen3-0.6b-t64-winner.log
 ```
+
+## 評価
+
+validationデータで指し手の正解率などを計測する
+
+```
+uv run python -m shogi_llm.evaluate_model_v1 config/qwen3-0.6b-t64-winner.yaml data/train/qwen3-0.6b-t64-winner/checkpoint-500000 --device cpu --limit 10
+```

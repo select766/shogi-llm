@@ -1,0 +1,5 @@
+llm_checkpoint: data/train/qwen3-0.6b-t64-winner/checkpoint-500000
+formatter:
+  n_think: 64
+  append_winner: true
+device: cpu
